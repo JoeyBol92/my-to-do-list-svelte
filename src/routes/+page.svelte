@@ -43,8 +43,15 @@
 	};
 
 	const deleteToDoList = () => {
+		removedTaskData = [...taskData];
 		taskData = [];
-		localStorage.clear();
+		localStorage.setItem('data', JSON.stringify(taskData));
+	};
+
+	const restoredRemovedTasks = () => {
+		taskData = [...removedTaskData];
+		removedTaskData = [];
+		localStorage.setItem('data', JSON.stringify(taskData));
 	};
 </script>
 
@@ -123,7 +130,15 @@
 	</ul>
 </div>
 
-<button
-	class="rounded border-2 bg-red-600 px-5 py-2 text-sm font-semibold text-white hover:cursor-pointer hover:bg-red-700"
-	on:click={deleteToDoList}>Clear all items</button
->
+<div class="flex gap-x-4">
+	<button
+		class="rounded border-2 bg-[#ff0000] px-5 py-2 text-sm font-semibold text-white hover:cursor-pointer hover:bg-red-700"
+		on:click={deleteToDoList}>Clear all items</button
+	>
+	{#if removedTaskData.length > 0}
+		<button
+			class="rounded border-2 bg-blue-400 px-5 py-2 text-sm font-semibold text-white hover:cursor-pointer hover:bg-blue-600"
+			on:click={restoredRemovedTasks}>Restore lists</button
+		>
+	{/if}
+</div>
