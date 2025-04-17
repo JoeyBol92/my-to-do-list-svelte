@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 
 	let taskData = [];
+	let removedTaskData = [];
 
 	// Load tasks from localStorage when the component mounts
 	onMount(() => {
