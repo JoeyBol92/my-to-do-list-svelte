@@ -31,11 +31,6 @@
 
 		taskData = [taskObj, ...taskData]; // Add new task at the start
 		localStorage.setItem('data', JSON.stringify(taskData));
-
-		// Clear form inputs after adding task
-		document.getElementById('todo-input').value = '';
-		document.getElementById('label-input').value = '';
-		document.getElementById('color-input').value = '#19D28B';
 	};
 
 	const toggleTask = (taskId) => {
