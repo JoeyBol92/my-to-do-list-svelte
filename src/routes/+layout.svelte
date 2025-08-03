@@ -3,6 +3,6 @@
 	let { children } = $props();
 </script>
 
-<div class=" mx-auto box-border max-w-screen-xl px-6">
+<div class=" mx-auto box-border max-w-2xl px-6">
 	{@render children()}
 </div>
