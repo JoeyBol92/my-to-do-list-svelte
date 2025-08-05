@@ -8,6 +8,7 @@
 	--font-Nunito: 'Nunito', sans-serif;
 }
 
+/* Style scrollbar web browser */
 * {
 	scrollbar-width: thin;
 	scrollbar-color: #2b7fff transparent;
