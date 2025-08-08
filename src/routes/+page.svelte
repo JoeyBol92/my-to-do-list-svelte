@@ -344,7 +344,20 @@
 	</div>
 {:else}
 	<!-- Progress bar -->
-	<!-- If task -->
+	<div class="font-Nunito pt-8 text-center">
+		<p class="text-sm text-gray-600">
+			{taskData.filter((task) => task.done).length} of {taskData.length} tasks completed
+		</p>
+	</div>
+	<div class="mt-2 h-2 w-full rounded-full bg-gray-200">
+		<div
+			class="h-2 rounded-full bg-green-600 transition-all"
+			style="width: {Math.round(
+				(taskData.filter((task) => task.done).length / taskData.length) * 100
+			)}%"
+		></div>
+	</div>
+	<!-- Task -->
 	<div class="font-Nunito my-6 rounded-lg bg-white shadow-lg">
 		<ul class="todo-list">
 			{#each taskData as task, i (task.id)}
