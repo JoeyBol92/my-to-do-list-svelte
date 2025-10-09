@@ -445,7 +445,7 @@
 	<!-- Clear all items -->
 	<div class="flex gap-x-4">
 		<button
-			class="rounded-lg border-2 bg-[#ff0000] px-5 py-2 text-sm font-semibold text-white hover:cursor-pointer hover:bg-red-700"
+			class="mb-6 rounded-lg border-2 bg-[#ff0000] px-5 py-2 text-sm font-semibold text-white hover:cursor-pointer hover:bg-red-700"
 			onclick={deleteToDoList}>Clear all items</button
 		>
 	</div>
